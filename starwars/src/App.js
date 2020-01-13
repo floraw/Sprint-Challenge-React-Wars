@@ -1,5 +1,15 @@
 import React from 'react';
+import CharacterList from './components/CharacterList';
 import './App.css';
+import styled from 'styled-components';
+
+const CardsContainer = styled.div`
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -12,6 +22,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <CardsContainer>
+        <CharacterList />
+      </CardsContainer>
     </div>
   );
 }
