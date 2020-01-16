@@ -20,3 +20,7 @@ const CharacterCard = props => {
 };
 
 export default CharacterCard;
+
+const test = "test";
+
+//test comments
