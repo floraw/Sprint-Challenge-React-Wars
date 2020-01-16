@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CharacterCard from "./CharacterCard";
+import HomeWorld from "./HomeWorld";
 
 
 const CharacterList = () => {
@@ -22,11 +23,15 @@ const CharacterList = () => {
     return (
         characters.map(char => {
             return (
-                <CharacterCard
-                key={char.url}
-                name={char.name}
-                films={char.films.length}
-            />
+                <>
+                    <CharacterCard
+                    key={char.url}
+                    name={char.name}
+                    films={char.films.length}
+                    homeworld={char.homeworld}
+                    />
+                    
+            </>
             );
         })
     );

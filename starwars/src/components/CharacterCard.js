@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import HomeWorld from './HomeWorld';
+
 
 const CardWrapper = styled.div`
     border: solid black 1px;
@@ -15,12 +17,11 @@ const CharacterCard = props => {
         <CardWrapper>
             <h1>{props.name}</h1>
             <p>Starring in {props.films} movies!</p>
+            <p>From <HomeWorld 
+                    homeworld={props.homeworld}
+                    /></p>
         </CardWrapper>
     );
 };
 
 export default CharacterCard;
-
-const test = "test";
-
-//test comments
